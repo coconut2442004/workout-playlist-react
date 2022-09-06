@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat:wght@300;400;500;600;700&display=swap");
+.wrapper {
+  user-select: none;
+  width: 100%;
+  height: 80vh;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+
+.motivation-song {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.5s linear 0s;
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    user-select: none;
+    font-size: 25px;
+    text-align: center;
+  }
+  .note {
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.view-song {
+  padding: 10px 0;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 1px 3px 6px 2px rgba(0, 0, 0, 0.4);
+}
+
+.view-CD {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(130deg, var(--color-hover), #000000);
+  background-size: 200% 200%;
+  animation: changePositionBackGround 2s linear infinite;
+}
+
+@keyframes changePositionBackGround {
+  25% {
+    background-position: left bottom;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+.CD {
+  border-radius: 50%;
+  width: 95%;
+  height: 95%;
+  background: url("../../imgs/bg1.jpg");
+  background-size: cover;
+  background-position: 55% 100%;
+  background-repeat: no-repeat;
+}
+.name-song-playing {
+  padding: 5px 0;
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 0;
+}
+.view-controller {
+  width: 350px;
+}
+
+// .name-song-playing {
+// }
+
+.song-process {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input {
+    cursor: pointer;
+    margin: 5px 0;
+    -webkit-appearance: none;
+    margin-right: 15px;
+    width: 200px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.6);
+    background-repeat: repeat;
+    background-image: none;
+    border-radius: 5px;
+    background-image: linear-gradient(var(--color-hover), var(--color-hover));
+    background-repeat: no-repeat;
+  }
+  span {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+.controll {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.icon-hover {
+  transition: all 0.5s linear;
+  padding: 5px;
+
+  &:hover {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: var(--color-hover);
+  }
+}
+
+// playlist
+
+.play-list {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  overflow-y: scroll;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 1s ease-out;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.list {
+  margin-top: 35px;
+  user-select: none;
+  padding: 10px;
+  width: 100%;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.25s linear;
+  &:hover {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.name-song {
+  font-size: 22px;
+}
+.name-src {
+  font-size: 18px;
+  color: var(--color-hover);
+  font-weight: bold;
+}
+.icon-playlist {
+  padding: 5px;
+}
+.icon-playlist:hover {
+  color: var(--color-hover);
+  cursor: pointer;
+}
+.btn-close-playlist {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.isplaying {
+  animation: circle 1s linear infinite;
+}
+@keyframes circle {
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.small-CD {
+  display: none;
+}
+
+.animationCircle {
+  animation: circle 5s linear infinite;
+}
+.paused {
+  animation-play-state: paused;
+}

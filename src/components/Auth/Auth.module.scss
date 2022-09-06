@@ -1,0 +1,65 @@
+.wrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+
+  .social-media {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+
+    a {
+      overflow: hidden;
+      color: var(--white-color);
+      background: var(--black-color);
+      width: 35px;
+      height: 35px;
+      transition: all 0.25s linear;
+      border-radius: 50%;
+      margin: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      &:nth-child(1):hover {
+        color: var(--white-color);
+        background-color: var(--github-color);
+      }
+      &:nth-child(2):hover {
+        color: var(--white-color);
+        background-color: var(--facebook-color);
+      }
+      &:nth-child(3):hover {
+        color: var(--white-color);
+        background-color: var(--twitter-color);
+      }
+      &:nth-child(4):hover {
+        color: var(--white-color);
+        background-color: var(--youtube-color);
+      }
+    }
+  }
+  .auth {
+    padding: 5px;
+    font-family: "Fira Code", monospace;
+    user-select: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p:nth-child(1) {
+      font-family: "Montserrat", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-right: 10px;
+    }
+  }
+}

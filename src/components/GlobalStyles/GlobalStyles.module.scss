@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Mochiy+Pop+P+One&family=Neonderthaw&family=Poppins&family=Rubik+Beastly&display=swap");
+/* 
+fonts: 
+	font-family: 'Mochiy Pop P One', sans-serif;
+	font-family: 'Poppins', sans-serif;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-hover: #badc58;
+  --black-color: #000000;
+  --white-color: #fff;
+  --facebook-color: rgb(9, 132, 227);
+  --github-color: rgb(45, 52, 54);
+  --twitter-color: rgb(0, 206, 201);
+  --youtube-color: rgb(214, 48, 49);
+}
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+[data-theme="dark"] {
+  background: var(--black-color);
+  color: var(--white-color) !important;
+}
+
+[data-theme="light"] {
+  background: var(--white-color) !important;
+  color: var(--black-color) !important;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: var(--white-color);
+}
