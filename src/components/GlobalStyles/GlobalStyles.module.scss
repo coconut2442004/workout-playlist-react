@@ -29,16 +29,13 @@ html {
 
 [data-theme="dark"] {
   background: var(--black-color);
-  color: var(--white-color) !important;
+  color: var(--white-color);
 }
 
 [data-theme="light"] {
-  background: var(--white-color) !important;
-  color: var(--black-color) !important;
+  background: var(--white-color);
+  color: var(--black-color);
 }
 ul {
   list-style: none;
-}
-a {
-  color: var(--white-color);
 }

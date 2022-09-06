@@ -13,31 +13,37 @@
 
     a {
       overflow: hidden;
-      color: var(--white-color);
-      background: var(--black-color);
-      width: 35px;
-      height: 35px;
       transition: all 0.25s linear;
       border-radius: 50%;
       margin: 5px 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      cursor: pointer;
 
-      &:nth-child(1):hover {
-        color: var(--white-color);
-        background-color: var(--github-color);
+      .icon-social-media {
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        padding: 5px;
       }
-      &:nth-child(2):hover {
+      .icon-media-github {
+        border: 1px solid var(--github-color);
+        color: var(--github-color);
+        background-color: var(--white-color);
+      }
+      .icon-media-facebook {
+        border: 1px solid var(--facebook-color);
         color: var(--white-color);
         background-color: var(--facebook-color);
       }
-      &:nth-child(3):hover {
+      .icon-media-twitter {
+        border: 1px solid var(--twitter-color);
         color: var(--white-color);
         background-color: var(--twitter-color);
       }
-      &:nth-child(4):hover {
+      .icon-media-youtube {
+        border: 1px solid var(--youtube-color);
         color: var(--white-color);
         background-color: var(--youtube-color);
       }
@@ -48,8 +54,8 @@
     font-family: "Fira Code", monospace;
     user-select: none;
     text-align: center;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,26 +1,32 @@
 import classNames from "classnames/bind";
 import styles from "./BackgroundMotivation.module.scss";
-import bg3 from "../../imgs/bg3.jpg";
 import lightbg from "../../imgs/lightbg.jpg";
-import bg2 from "../../imgs/bg2.jpg";
+import bg4 from "../../imgs/bg4.jpg";
 import { ThemeContext } from "../../Theme";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 const cx = classNames.bind(styles);
 function BackgroundMotivation() {
   const [theme] = useContext(ThemeContext);
 
   return (
     <div className={cx("wrapper")}>
-      <img
-        src={theme.theme === "dark" ? bg2 : lightbg}
-        style={
-          theme.theme === "dark"
-            ? { transform: "translate(0 , -29%)" }
-            : { transform: "translate(0 , 0)" }
-        }
-        alt="Background"
-        className={cx("background-motivation")}
-      />
+      <motion.div
+        key={theme.theme === "dark" ? bg4 : lightbg}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          delay: 0,
+          x: { type: "spring", stiffness: 100 },
+          default: { duration: 2 },
+        }}
+      >
+        <img
+          src={theme.theme === "dark" ? bg4 : lightbg}
+          alt="Background"
+          className={cx("background-motivation")}
+        />
+      </motion.div>
     </div>
   );
 }

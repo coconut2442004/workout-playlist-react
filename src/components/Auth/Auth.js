@@ -15,25 +15,25 @@ function Auth() {
         <a href="https://github.com">
           <FontAwesomeIcon
             icon={faGithub}
-            className={cx("icon-social-media")}
+            className={cx("icon-social-media", "icon-media-github")}
           />
         </a>
         <a href="https://www.facebook.com/TienDat2442004">
           <FontAwesomeIcon
             icon={faFacebook}
-            className={cx("icon-social-media")}
+            className={cx("icon-social-media", "icon-media-facebook")}
           />
         </a>
         <a href="#">
           <FontAwesomeIcon
             icon={faTwitter}
-            className={cx("icon-social-media")}
+            className={cx("icon-social-media", "icon-media-twitter")}
           />
         </a>
         <a href="#">
           <FontAwesomeIcon
             icon={faYoutube}
-            className={cx("icon-social-media")}
+            className={cx("icon-social-media", "icon-media-youtube")}
           />
         </a>
       </div>

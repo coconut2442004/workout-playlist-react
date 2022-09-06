@@ -177,7 +177,9 @@ function MotivationSong() {
       <PlayList audio={audio} setAudio={setAudio} />
       <div className={cx("motivation-song")}>
         <h2>Best Playlist For Workout</h2>
-        <p className={cx("note")}>Please wear headphonse the best experience</p>
+        <p className={cx("note")}>
+          Please wear headphones for the best experience
+        </p>
         <div className={cx("view-song")}>
           <div className={cx("view-CD")}>
             <div

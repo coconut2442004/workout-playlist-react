@@ -52,7 +52,6 @@ function App() {
   const [showApp, setShowApp] = useState(false);
   useEffect(() => {
     const handleSetShowApp = () => {
-      console.log(window.innerWidth);
       if (window.innerWidth >= 560) {
         setShowApp(false);
       } else {

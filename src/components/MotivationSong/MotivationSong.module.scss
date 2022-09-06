@@ -24,10 +24,11 @@
   }
   .note {
     margin-bottom: 20px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Fira Code", monospace;
     font-weight: bold;
     font-size: 14px;
     text-align: center;
+    letter-spacing: -1.5px;
   }
 }
 
@@ -39,7 +40,7 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
-  box-shadow: 1px 3px 6px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.3);
 }
 
 .view-CD {
@@ -48,8 +49,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  width: 280px;
-  height: 280px;
+  width: 240px;
+  height: 240px;
   background: linear-gradient(130deg, var(--color-hover), #000000);
   background-size: 200% 200%;
   animation: changePositionBackGround 2s linear infinite;
@@ -103,12 +104,26 @@
     margin-right: 15px;
     width: 200px;
     height: 2px;
-    background: rgba(255, 255, 255, 0.6);
-    background-repeat: repeat;
-    background-image: none;
     border-radius: 5px;
     background-image: linear-gradient(var(--color-hover), var(--color-hover));
     background-repeat: no-repeat;
+    color: var(--color-hover);
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: var(--color-hover);
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background 0.3s ease-in-out;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
   }
   span {
     width: 20px;
@@ -125,6 +140,7 @@
   justify-content: space-evenly;
 }
 .icon-hover {
+  font-size: 20px;
   transition: all 0.5s linear;
   padding: 5px;
 
@@ -176,7 +192,7 @@
 }
 
 .name-song {
-  font-size: 22px;
+  font-size: 18px;
 }
 .name-src {
   font-size: 18px;
