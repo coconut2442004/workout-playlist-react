@@ -33,7 +33,7 @@ html {
 }
 
 [data-theme="light"] {
-  background: var(--white-color);
+  background: var(--white-color) !important;
   color: var(--black-color);
 }
 ul {
