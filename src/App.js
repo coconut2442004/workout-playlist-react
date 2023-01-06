@@ -59,11 +59,11 @@ function App() {
         setShowApp(true);
       }
     };
-    window.addEventListener("load", handleSetShowApp);
+    window.addEventListener("load", handleSetShowApp());
     window.addEventListener("resize", handleSetShowApp);
 
     return () => {
-      window.removeEventListener("load", handleSetShowApp);
+      window.removeEventListener("load", handleSetShowApp());
       window.removeEventListener("resize", handleSetShowApp);
     };
   }, []);
