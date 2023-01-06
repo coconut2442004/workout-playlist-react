@@ -22,17 +22,18 @@ function App() {
           justifyContent: "center",
           top: "20px",
           right: "20px",
-          boxShadow: "1px 4px 4px 2px rgba(0,0,0,0.4)",
-          padding: "10px 5px",
-          borderRadius: 5,
+          boxShadow: "1px 4px 4px 2px rgba(0,0,0,0.2)",
+          padding: 10,
+          borderRadius: 8,
           fontWeight: "500",
-          color: "#eb4d4b",
+          color: "#fff",
+          backgroundColor: "#eb4d4b",
           animation: "error-mes 2s ease",
         }}
       >
         <FontAwesomeIcon
           icon={faCircleExclamation}
-          style={{ marginRight: 5 }}
+          style={{ marginRight: 5, padding: 10 }}
         />
         No data response, please use this app in mobile
       </div>
@@ -58,11 +59,11 @@ function App() {
         setShowApp(true);
       }
     };
-    window.addEventListener("load", handleSetShowApp());
+    window.addEventListener("load", handleSetShowApp);
     window.addEventListener("resize", handleSetShowApp);
 
     return () => {
-      window.removeEventListener("load", handleSetShowApp());
+      window.removeEventListener("load", handleSetShowApp);
       window.removeEventListener("resize", handleSetShowApp);
     };
   }, []);

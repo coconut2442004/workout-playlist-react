@@ -10,8 +10,8 @@ fonts:
   box-sizing: border-box;
 }
 :root {
-  --color-hover: #badc58;
-  --black-color: #000000;
+  --color-hover: #00cec9;
+  --black-color: #000;
   --white-color: #fff;
   --facebook-color: rgb(9, 132, 227);
   --github-color: rgb(45, 52, 54);
@@ -38,4 +38,8 @@ html {
 }
 ul {
   list-style: none;
+}
+img {
+  width: 100%;
+  object-fit: cover;
 }
