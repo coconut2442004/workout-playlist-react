@@ -7,7 +7,7 @@
   z-index: 20;
 }
 .icon-hover {
-  transition: all 0.5s linear;
+  transition: var(--smooth);
   padding: 10px;
   border-radius: 50%;
   width: 14px;
@@ -21,20 +21,24 @@
 
   &:hover {
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: var(--smooth);
     color: var(--color-hover);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   }
 }
 .motivation-song {
-  width: 100%;
+  width: 95%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: all 0.5s linear 0s;
+  transition: var(--smooth);
+  background-color: rgba(15, 195, 236, 0.2);
+  backdrop-filter: blur(5px);
+  margin: auto;
+  border-radius: var(--border-radius);
   h2 {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -59,7 +63,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
 }
 
 .view-CD {
@@ -119,7 +123,7 @@
     margin-right: 15px;
     width: 200px;
     height: 2px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     background-image: linear-gradient(var(--color-hover), var(--color-hover));
     background-repeat: no-repeat;
     color: var(--color-hover);
@@ -133,7 +137,7 @@
     background: var(--color-hover);
     cursor: pointer;
     box-shadow: 0 0 2px 0 #555;
-    transition: background 0.3s ease-in-out;
+    transition: var(--smooth)-in-out;
   }
   input[type="range"]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
@@ -174,7 +178,7 @@
   top: 0;
   bottom: 0;
   left: 0;
-  transition: all 1s ease-out;
+  transition: var(--smooth);
   background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(5px) !important;
   &::-webkit-scrollbar {
@@ -193,8 +197,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px 10px;
-  border-radius: 8px;
-  transition: all 0.25s linear;
+  border-radius: var(--border-radius);
+  transition: var(--smooth);
   margin: 8px 0;
   cursor: pointer;
   &:hover {
@@ -222,10 +226,6 @@
   margin: 0 5px;
   font-size: 20px;
   border-radius: 50%;
-  box-shadow: rgba(255, 255, 255, 1) 0px -23px 25px 0px inset,
-    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 0px 2px, rgba(0, 0, 0, 0.09) 0px 0px 0px;
 }
 .icon-playlist:hover {
   color: var(--color-hover);
@@ -273,7 +273,7 @@
     font-weight: 600;
     text-align: center;
     font-family: "Mochiy Pop P One", sans-serif;
-    transition: all 0.25s ease;
+    transition: var(--smooth);
   }
   &__current-song {
     width: 90%;
@@ -290,6 +290,88 @@
       height: 180px;
       border-radius: 50%;
       border: 4px solid #000;
+    }
+  }
+}
+@media screen and (min-width: 1240px) {
+  .motivation-song {
+    background-color: rgba(15, 195, 236, 0.2);
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: inherit;
+    width: 30%;
+    max-height: 80vh;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    margin-left: 20%;
+    border: 2px solid var(--color-hover);
+    border-right: 0;
+  }
+  .play-list {
+    border: 2px solid var(--color-hover);
+    border-left: 0;
+    background-color: rgba(15, 195, 236, 0.2) !important;
+    backdrop-filter: blur(5px) !important;
+    position: relative;
+    z-index: inherit;
+    width: 30%;
+    max-height: 80vh;
+    float: right;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    margin-right: 20%;
+    transform: translateX(0) !important;
+    ul {
+      overflow-y: scroll;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      margin-bottom: 20px;
+    }
+    ul::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 640px) {
+  .motivation-song {
+    border: 2px solid var(--color-hover);
+    border-right: 0;
+    background-color: rgba(15, 195, 236, 0.2);
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: inherit;
+    width: 40%;
+    max-height: 80vh;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    margin-left: 10%;
+  }
+  .play-list {
+    border: 2px solid var(--color-hover);
+    border-left: 0;
+    background-color: rgba(15, 195, 236, 0.2) !important;
+    backdrop-filter: blur(5px) !important;
+    position: relative;
+    z-index: inherit;
+    width: 40%;
+    max-height: 80vh;
+    float: right;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    margin-right: 10%;
+    transform: translateX(0) !important;
+    ul {
+      overflow-y: scroll;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      margin-bottom: 20px;
+    }
+    ul::-webkit-scrollbar {
+      display: none;
     }
   }
 }

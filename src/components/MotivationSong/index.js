@@ -220,8 +220,11 @@ function MotivationSong() {
                   });
                 }}
               />
-              <span>{timer.minutes >= 0 ? `${timer.minutes}:` : `0:`}</span>
-              <span>{timer.seconds >= 0 ? timer.seconds : 0}</span>
+              <span className={cx({ paused: !audio.isPlaying })}>
+                {timer.minutes >= 0 && timer.seconds >= 0
+                  ? `${timer.minutes}:${timer.seconds}`
+                  : `0:0`}
+              </span>
             </div>
             <div className={cx("controll")}>
               <FontAwesomeIcon
