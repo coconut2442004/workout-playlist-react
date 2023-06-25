@@ -26,12 +26,11 @@ import song25 from "../../static/Omen Official Theme song Valorant.mp3";
 import song26 from "../../static/Brimstone  Official Theme Song Music  Rebel Spirit  Sound Breakers   Valorant.mp3";
 import song27 from "../../static/Don Apollo  Wusk  Mercy.mp3";
 import song28 from "../../static/BIOJECT  Ranger Magic Free Release.mp3";
-import song29 from "../../static/Brimstone  Official Theme Song Music  Rebel Spirit  Sound Breakers   Valorant.mp3";
-import song30 from "../../static/Dirty Palm  Benix  Legacy NCS Release.mp3";
-import song31 from "../../static/More Plastic  Razor NCS Release.mp3";
-import song32 from "../../static/NEFFEX  Tell Me That I Cant Copyright Free.mp3";
-import song33 from "../../static/Pusher  Clear ft Mothica Shawn Wasabi Remix.mp3";
-import song34 from "../../static/LCS 2021  Commercial Break  Fast Flow.mp3";
+import song29 from "../../static/Dirty Palm  Benix  Legacy NCS Release.mp3";
+import song30 from "../../static/More Plastic  Razor NCS Release.mp3";
+import song31 from "../../static/NEFFEX  Tell Me That I Cant Copyright Free.mp3";
+import song32 from "../../static/Pusher  Clear ft Mothica Shawn Wasabi Remix.mp3";
+import song33 from "../../static/LCS 2021  Commercial Break  Fast Flow.mp3";
 
 const listSongGym = [
   {
@@ -176,33 +175,28 @@ const listSongGym = [
   },
   {
     id: 29,
-    titleSong: "Valorant Brimstone",
+    titleSong: "Dirty Palm Benix Legacy",
     src: song29,
   },
   {
     id: 30,
-    titleSong: "Dirty Palm Benix Legacy",
+    titleSong: "More Plastic - Razor",
     src: song30,
   },
   {
     id: 31,
-    titleSong: "More Plastic - Razor",
+    titleSong: "NEFFEX  Tell Me That I Cant",
     src: song31,
   },
   {
     id: 32,
-    titleSong: "NEFFEX  Tell Me That I Cant",
+    titleSong: "Pusher - Clear ft Mothica",
     src: song32,
   },
   {
     id: 33,
-    titleSong: "Pusher - Clear ft Mothica",
-    src: song33,
-  },
-  {
-    id: 34,
     titleSong: "LCS 2021 |Commercial Break| Fast Flow",
-    src: song34,
+    src: song33,
   },
 ];
 
@@ -241,5 +235,4 @@ export {
   song31,
   song32,
   song33,
-  song34,
 };
